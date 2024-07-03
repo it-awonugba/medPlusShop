@@ -1,7 +1,8 @@
-import {View, Image, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Image, Text, StyleSheet} from 'react-native';
 import {useFormatCurrency} from '../hooks/useFormatCurrency';
 import {Product} from '../data/Products';
 import CustomButton from './ui/CustomButton';
+import {useCart} from '../context/CartContext';
 
 type Prop = {
   product: Product;
@@ -9,6 +10,7 @@ type Prop = {
 
 const ProductItem = ({product}: Prop) => {
   const {formatCurrency} = useFormatCurrency();
+  const {addProductToCart} = useCart();
   return (
     <View style={styles.container}>
       <Image source={product.image} style={styles.productImage} />
@@ -17,7 +19,7 @@ const ProductItem = ({product}: Prop) => {
       <CustomButton
         label="Add to Cart"
         onPress={() => {
-          return;
+          addProductToCart(product);
         }}
       />
     </View>

@@ -1,7 +1,8 @@
 import {View, Text, StyleSheet} from 'react-native';
-import React from 'react';
+import {useCart} from '../context/CartContext';
 
 const Header = () => {
+  const {cart} = useCart();
   return (
     <View style={styles.headerStyle}>
       <View>
@@ -9,7 +10,7 @@ const Header = () => {
       </View>
       <View style={styles.cart}>
         <Text style={styles.cart}>
-          Cart (<Text style={styles.cartCount}>{0}</Text>)
+          Cart (<Text style={styles.cartCount}>{cart.length}</Text>)
         </Text>
       </View>
     </View>
