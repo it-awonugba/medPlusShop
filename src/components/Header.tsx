@@ -26,17 +26,21 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(0,0,0,0.2)',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
   },
   appIconText: {
     fontSize: 20,
     fontWeight: '800',
+    color: 'rgb(0, 0, 0)',
   },
   cart: {
     padding: 4,
     fontWeight: '800',
+    color: 'rgb(0, 0, 0)',
   },
   cartCount: {
     fontWeight: '400',
+    color: 'rgb(0, 0, 0)',
   },
 });
 
