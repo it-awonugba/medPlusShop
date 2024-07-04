@@ -31,6 +31,7 @@ const CheckoutScreen = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 12,
+    backgroundColor: 'rgb(255, 255, 255)',
   },
   textContainer: {
     alignItems: 'center',

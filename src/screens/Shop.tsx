@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 12,
     marginBottom: 50,
+    backgroundColor: 'rgb(255, 255, 255)',
   },
   columnStyle: {
     gap: 10,

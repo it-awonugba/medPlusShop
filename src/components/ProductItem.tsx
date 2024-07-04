@@ -19,9 +19,10 @@ const ProductItem = ({product}: Prop) => {
         resizeMode="cover"
       />
       <Text style={styles.productTitle}>{product.title}</Text>
-      <Text>{formatCurrency(product.price)}</Text>
+      <Text style={styles.price}>{formatCurrency(product.price)}</Text>
       <CustomButton
         label="Add to Cart"
+        type="transparent"
         onPress={() => {
           addProductToCart(product);
         }}
@@ -48,6 +49,10 @@ const styles = StyleSheet.create({
   },
   productTitle: {
     fontWeight: '600',
+    color: 'rgb(0,0,0)',
+  },
+  price: {
+    color: 'rgb(0,0,0)',
   },
 });
 
