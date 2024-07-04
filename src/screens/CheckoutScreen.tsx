@@ -30,6 +30,7 @@ const CheckoutScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     padding: 12,
     backgroundColor: 'rgb(255, 255, 255)',
   },

@@ -41,7 +41,7 @@ const CartItem: React.FC<CartItemProps> = ({
         <Image source={item.image} resizeMode="cover" style={styles.image} />
       </View>
       <View style={styles.productInformation}>
-        <Text>{item.title}</Text>
+        <Text style={styles.productTitle}>{item.title}</Text>
         <View style={styles.quantityControls}>
           <TouchableOpacity onPress={decrement}>
             <Image
@@ -59,7 +59,9 @@ const CartItem: React.FC<CartItemProps> = ({
         </View>
       </View>
       <View style={styles.priceBox}>
-        <Text>{formatCurrency(item.price * quantity)}</Text>
+        <Text style={styles.price}>
+          {formatCurrency(item.price * quantity)}
+        </Text>
       </View>
       <TouchableOpacity onPress={() => removeProductFromCart(item.id)}>
         <Image source={require('../assets/close.png')} style={styles.control} />
@@ -93,8 +95,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  productTitle: {
+    fontWeight: '600',
+    color: 'rgb(0,0,0)',
+  },
+  price: {
+    color: 'rgb(0,0,0)',
+  },
   quantityBox: {
     textAlign: 'center',
+    color: 'rgb(0,0,0)',
   },
   control: {
     width: 12,

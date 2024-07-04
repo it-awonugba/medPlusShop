@@ -10,7 +10,7 @@ export default function CartFooter() {
     <View style={styles.constainer}>
       <View style={styles.totalContainer}>
         <Text style={styles.subTotal}>Total:</Text>
-        <Text>
+        <Text style={styles.totalPrice}>
           {formatCurrency(
             cart.reduce(
               (total, item) => total + item.price * item.quantity!,
@@ -37,5 +37,9 @@ const styles = StyleSheet.create({
   subTotal: {
     fontWeight: 'bold',
     fontSize: 16,
+    color: 'rgb(0,0,0)',
+  },
+  totalPrice: {
+    color: 'rgb(0,0,0)',
   },
 });
