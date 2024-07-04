@@ -48,9 +48,9 @@ This is one way to run your app — you can also run it directly from within And
 
 ## Screenshots
 
-[Shop/Products](https://github.com/)
-[Checkout]()
+[Shop/Products](https://github.com/it-awonugba/medPlusShop/blob/main/src/assets/screenshots/Screenshot_1720099466.png)
+[Checkout](https://github.com/it-awonugba/medPlusShop/blob/main/src/assets/screenshots/Screenshot_1720099507.png)
 
 ## Download apk
 
-[Download](https://appetize.io/app/b_bed524pezq4xkp3itc7m2qimta)
+[Download](https://drive.google.com/file/d/1UaQmeU6dw022EcFnVBsDuUkRouKXTqvB/view?usp=sharing)
