@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(0,0,0,0.2)',
-    marginBottom: 6,
   },
   appIconText: {
     fontSize: 20,

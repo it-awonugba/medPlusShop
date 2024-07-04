@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    marginBottom: 65,
+    padding: 12,
+    marginBottom: 50,
   },
   columnStyle: {
     gap: 10,
-    marginHorizontal: 10,
   },
 });
 

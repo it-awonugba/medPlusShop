@@ -13,7 +13,11 @@ const ProductItem = ({product}: Prop) => {
   const {addProductToCart} = useCart();
   return (
     <View style={styles.container}>
-      <Image source={product.image} style={styles.productImage} />
+      <Image
+        source={product.image}
+        style={styles.productImage}
+        resizeMode="cover"
+      />
       <Text style={styles.productTitle}>{product.title}</Text>
       <Text>{formatCurrency(product.price)}</Text>
       <CustomButton
@@ -33,13 +37,13 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(0, 0, 0, 0.1)',
     borderWidth: 1,
     paddingBottom: 10,
-    paddingTop: 4,
+    marginBottom: 8,
     alignItems: 'center',
-    gap: 4,
+    gap: 6,
   },
   productImage: {
-    width: 180,
-    height: 180,
+    width: '100%',
+    height: 'auto',
     aspectRatio: 1,
   },
   productTitle: {

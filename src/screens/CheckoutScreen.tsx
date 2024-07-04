@@ -6,7 +6,7 @@ import CartFooter from '../components/CartFooter';
 const CheckoutScreen = () => {
   const {cart, removeProductFromCart} = useCart();
   return (
-    <View>
+    <View style={styles.container}>
       {cart.length > 0 ? (
         <FlatList
           data={cart}
@@ -19,7 +19,7 @@ const CheckoutScreen = () => {
           ListFooterComponent={<CartFooter />}
         />
       ) : (
-        <View style={styles.container}>
+        <View style={styles.textContainer}>
           <Text> Your cart is empty</Text>
         </View>
       )}
@@ -29,6 +29,9 @@ const CheckoutScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    padding: 12,
+  },
+  textContainer: {
     alignItems: 'center',
   },
 });
