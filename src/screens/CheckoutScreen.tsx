@@ -4,7 +4,7 @@ import CartItem from '../components/CartItem';
 import CartFooter from '../components/CartFooter';
 
 const CheckoutScreen = () => {
-  const {cart, removeProductFromCart} = useCart();
+  const {cart, removeProductFromCart, addProductToCart} = useCart();
   return (
     <View style={styles.container}>
       {cart.length > 0 ? (
@@ -13,6 +13,7 @@ const CheckoutScreen = () => {
           renderItem={({item}) => (
             <CartItem
               item={item}
+              addProductToCart={addProductToCart}
               removeProductFromCart={removeProductFromCart}
             />
           )}

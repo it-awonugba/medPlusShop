@@ -16,17 +16,25 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<CartProviderProps> = ({children}) => {
   const [cart, setCart] = useState<Product[]>([]);
 
-  const addProductToCart = (product: Product) => {
+  const addProductToCart = (product: Product, newQuantity?: number) => {
+    let quantity = newQuantity ?? 1;
+
     setCart(prevCart => {
       const existingItemIndex = prevCart.findIndex(
         item => item.id === product.id,
       );
+
       if (existingItemIndex !== -1) {
         const updatedCart = [...prevCart];
-        updatedCart[existingItemIndex].quantity! += 1;
+        updatedCart[existingItemIndex].quantity! += quantity;
+
+        if (updatedCart[existingItemIndex].quantity! <= 0) {
+          return updatedCart.filter(item => item.id !== product.id);
+        }
+
         return updatedCart;
       } else {
-        return [...prevCart, {...product, quantity: 1}];
+        return [...prevCart, {...product, quantity: quantity}];
       }
     });
   };
