@@ -53,4 +53,4 @@ This is one way to run your app — you can also run it directly from within And
 
 ## Download apk
 
-[Download](https://drive.google.com/file/d/1hCr_qUodYwiUPB49MEcKdyDBjF8aJyv5/view?usp=sharing)
+[Download](https://drive.google.com/file/d/1LXIyBa9U_B_fjRCg0I6Fva9JlB3AqfPl/view?usp=sharing)
