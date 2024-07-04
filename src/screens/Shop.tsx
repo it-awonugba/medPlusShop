@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 12,
-    marginBottom: 50,
+    paddingBottom: 50,
     backgroundColor: 'rgb(255, 255, 255)',
   },
   columnStyle: {
